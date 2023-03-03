@@ -1,7 +1,27 @@
-<div>
-  <h2>Hello!</h2>
-</div>
+<head>
+  <link href="./app.component.css" rel="stylesheet">
+</head>
 
-<h4>WILL THIS SHOW UP???</h4>
-<app-square></app-square>
-<router-outlet></router-outlet>
+<!-- <nav class="navbar">
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <a class="navbar-link is-arrowless" routerLink="/home">
+          Home
+        </a>
+      </div>
+    </div>
+  </div>
+</nav> -->
+<!-- 
+<div class="mazeWrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" id="maze" width=100% viewBox="0 0 100 100">
+      <path id="myLine"/>  
+  </svg> 
+</div> -->
+
+
+<main [@routeAnimations]="prepareRoute(outlet)" class="content">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
+
